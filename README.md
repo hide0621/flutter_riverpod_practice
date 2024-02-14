@@ -20,3 +20,7 @@ samples, guidance on mobile development, and a full API reference.
 こちらの教材を使用しています
 
 [Flutter Riverpod 2.0: The Ultimate Guide](https://codewithandrea.com/articles/flutter-state-management-riverpod/)
+
+また、この記事も良さそう（上記教材を噛み砕いているイメージ）
+
+[Flutter Riverpod 入門](https://zenn.dev/naoya_maeda/articles/a8bbf40a202c74)
