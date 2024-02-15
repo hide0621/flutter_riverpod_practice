@@ -31,6 +31,12 @@ samples, guidance on mobile development, and a full API reference.
 
 その後、`flutter pub get`コマンドを実行することでRiverpodがプロジェクトに追加される
 
+次に、[この記事](https://zenn.dev/naoya_maeda/articles/a8bbf40a202c74#%E3%83%AB%E3%83%BC%E3%83%88%E3%81%ABproviderscope%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B)のように、`main関数`の`runApp関数`の引数に、
+
+定数コンストラクタである`ProviderScope()`を記述し、この引数に`child: MyApp()`とのように記述することで、アプリ全体でProviderを利用できるようになる
+
+より詳しく言うと、上位Widgetの`MyApp()`（`MyApp`は`StatelessWidget`を**継承**、つまり**Wrap**しているので）を囲むことで、MyApp以降のWidgetでもProviderを呼び出すことができる
+
 
 # refについて
 
