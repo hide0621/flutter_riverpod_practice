@@ -24,3 +24,17 @@ samples, guidance on mobile development, and a full API reference.
 また、この記事も良さそう（上記教材を噛み砕いているイメージ）
 
 [Flutter Riverpod 入門](https://zenn.dev/naoya_maeda/articles/a8bbf40a202c74)
+
+# refについて
+
+`ref`はラムダ式（無名関数）の引数
+
+この`ref`引数は`ProviderReference型のオブジェクト`で、他のプロバイダーを参照したり、リソースのクリーンアップをスケジュールしたりするためのメソッドを提供する
+
+具体的には、以下のような使い方がある：
+
+`ref.watch(anotherProvider)`：`anotherProvider`の現在の値を取得し、`anotherProvider`の値が変更されるたびにこのプロバイダーを再計算します。
+
+`ref.read(anotherProvider)`：`anotherProvider`の現在の値を取得しますが、`anotherProvider`の値が変更されてもこのプロバイダーは再計算されません。
+
+`ref.onDispose(callback)`：プロバイダーが破棄されるときに実行するクリーンアップコードをスケジュールします。
