@@ -25,6 +25,13 @@ samples, guidance on mobile development, and a full API reference.
 
 [Flutter Riverpod 入門](https://zenn.dev/naoya_maeda/articles/a8bbf40a202c74)
 
+# Riverpodの使い方
+
+まず最初に、[pub.dev](https://pub.dev/packages/flutter_riverpod)を見て最新のRiverpodのバージョンを調べ、それが分かったら`pubspec.yaml`の`dependencies`に[この記事](https://zenn.dev/naoya_maeda/articles/a8bbf40a202c74#flutter_riverpod%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)みたいに追記する
+
+その後、`flutter pub get`コマンドを実行することでRiverpodがプロジェクトに追加される
+
+
 # refについて
 
 `ref`はラムダ式（無名関数）の引数
