@@ -33,11 +33,14 @@ class MyApp extends StatelessWidget {
 final strProvider = Provider((ref) => 'Hello, Riverpod!');
 
 //Providerからデータを取得する
+// Providerからデータを取得するためにConsumerWidget を使用する
+// ConsumerWidget を継承したWidget（今回はRiverpodSample）を定義すると、build() にWidgetRef 型の引数が追加できる
 class RiverpodSample extends ConsumerWidget {
   const RiverpodSample({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // ProviderにstrProvider を指定しているので、strProvider が管理しているデータである'Hello Riverpod' を取得することができる
     final value = ref.watch(strProvider);
     return Scaffold(
       appBar: AppBar(
