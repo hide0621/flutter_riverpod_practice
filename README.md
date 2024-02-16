@@ -92,6 +92,8 @@ Flutterフレームワークはこの`key(Keyクラスのオブジェクト)`を
 
 ⭐️グローバルな値を提供するために使われることが多い。
 
+[このレポジトリでのサンプルコード](https://github.com/hide0621/flutter_riverpod_practice/blob/develop/lib/main.dart)
+
 # StateNotifierProviderについて
 
 `StateNotifierProvider`の特徴は...
@@ -102,6 +104,8 @@ Flutterフレームワークはこの`key(Keyクラスのオブジェクト)`を
 
 ⭐️高度な状態管理に向いている。
 
+[このレポジトリでのサンプルコード](https://github.com/hide0621/flutter_riverpod_practice/blob/feature/pracitce-StateNotifierProvider/lib/main.dart)
+
 # FutureProviderについて
 
 ⭐️`Future`型を取り扱うProvider。
@@ -109,6 +113,8 @@ Flutterフレームワークはこの`key(Keyクラスのオブジェクト)`を
 ⭐️**非同期データの取得**に使用して、データが使用可能（取得完了）になると`Widget`を更新する。
 
 ⭐️例としてAPIの呼び出しやSharedPreferencesなどの非同期処理など。
+
+[このレポジトリでのサンプルコード](https://github.com/hide0621/flutter_riverpod_practice/blob/feature/practice-FutureProvider/lib/main.dart)
 
 ---
 
