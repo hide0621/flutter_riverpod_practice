@@ -34,6 +34,7 @@ class RiverpodSample extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // FutureProviderのオブジェクトをキャッチする
     final value = ref.watch(futureProvider);
 
     return Scaffold(
@@ -42,16 +43,22 @@ class RiverpodSample extends ConsumerWidget {
       ),
       body: Center(
         child: value.when(
+            // dataプロパティには非同期処理が完了した時に表示するウィジェット（Text部分）を返す「コールバック関数」
+            // (return 'Hello Future Riverpod!';の部分)を渡す
             data: (data) {
               return Text(
                 data.toString(),
                 style: const TextStyle(fontSize: 24),
               );
             },
+            // errorプロパティには非同期処理に失敗した時に表示するウィジェット（Text部分）
+            // を返すコールバック関数（以下の(error, trace)と言う無名関数）を渡す
             error: (error, trace) => Text(
                   error.toString(),
                   style: const TextStyle(fontSize: 24),
                 ),
+            // loadingプロパティには非同期処理を実行している時に表示するウィジェット（CircularProgressIndicator部分）
+            // を返す「コールバック関数」（以下の()と言う無名関数）を渡す
             loading: () => const CircularProgressIndicator()),
       ),
     );
