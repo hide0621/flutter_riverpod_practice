@@ -84,23 +84,31 @@ Flutterフレームワークはこの`key(Keyクラスのオブジェクト)`を
 
 # Providerについて
 
-Providerの特徴は...
+`Provider`の特徴は...
 
-⭐️一度定義すると状態が外部から変更できない。（定数チック）
+⭐️一度定義すると状態が外部から変更できない。（**定数チック**）
 
-⭐️初期化時点で他のProviderの値を参照して、その値を加工した値をProviderの値として保持することも可能。
+⭐️初期化時点で他の`Provider`の値を参照して、その値を加工した値を`Provider`の値として保持することも可能。
 
 ⭐️グローバルな値を提供するために使われることが多い。
 
 # StateNotifierProviderについて
 
-StateNotifierProviderの特徴は...
+`StateNotifierProvider`の特徴は...
 
-⭐️状態を表す変数(state)と、状態を更新するメソッドを持つProvider。
+⭐️状態を表す変数(`state`)と、状態を更新するメソッドを持つProvider。
 
-⭐️StateNotifierを継承したクラスを監視して、状態に変化があれば画面を更新する。
+⭐️`StateNotifier`を継承したクラスを監視して、**状態に変化があれば画面を更新する。**
 
 ⭐️高度な状態管理に向いている。
+
+# FutureProviderについて
+
+⭐️`Future`型を取り扱うProvider。
+
+⭐️**非同期データの取得**に使用して、データが使用可能（取得完了）になると`Widget`を更新する。
+
+⭐️例としてAPIの呼び出しやSharedPreferencesなどの非同期処理など。
 
 ---
 
@@ -119,3 +127,4 @@ StateNotifierProviderの特徴は...
 ⭐️State内からrefが参照できる。
 
 ⭐️Riverpod版のStatefulWidget。
+
