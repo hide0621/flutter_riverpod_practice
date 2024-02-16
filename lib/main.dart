@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
 }
 
 //StateNotifierProvider で管理するStateNotifier のサブクラス（CounterNotifier）を実装する
+//外部からデータを変更する時はこのサブクラス内のメソッドを呼び出す
 class CounterNotifier extends StateNotifier<int> {
   CounterNotifier() : super(0);
 
@@ -34,6 +35,8 @@ class CounterNotifier extends StateNotifier<int> {
 }
 
 // StateNotifierProvider を作成する
+// StateNotifierProvider を定義する時は
+// StateNotifierProvider の後に<管理するStateNotifier のサブクラス名, StateNotifier で管理するデータの型>が必要
 final counterProvider = StateNotifierProvider<CounterNotifier, int>((ref) {
   return CounterNotifier();
 });
@@ -43,9 +46,13 @@ class RiverpodSample extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    //
+    // StateNotifier のサブクラスはWidgetRef クラスのwatch() またはread() の引数に
+    // StateNotifierProvider インスタンスの.notifier を指定することで取得することができる
     final countStateController = ref.read(counterProvider.notifier);
-    //
+    // StateNotifier のサブクラスのデータ(state )はWidgetRef クラスのwatch() またはread() の引数に
+    // StateNotifierProvider インスタンスを指定することで取得することができる
+    // Providerで管理しているデータをwatch() で取得した時は、データの変更がウィジェットに通知され、ウィジェットがリビルドされる
+    // フローティングボタンをタップするとデータに変更が入り、RiverpodSample ウィジェットがリビルドされることで画面に表示しているテキストを更新している
     final count = ref.watch(counterProvider);
 
     return Scaffold(
