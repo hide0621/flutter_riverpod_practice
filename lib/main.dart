@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// Providerは外部から変更することができないデータを管理するためのものであり、
+// Providerは外部から変更することができないデータを管理するためのものであり（下のコードだとHello, Riverpod!）、
 // このデータは、アプリケーション全体で共有される
 
 //Providerをグローバル変数として定義する
