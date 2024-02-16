@@ -75,3 +75,29 @@ Flutterフレームワークはこの`key(Keyクラスのオブジェクト)`を
 *初期化の手順は親クラスのコンストラクタが先に実行される*
 
 この一連の流れ（つまりは、**keyは子クラスから親クラスに渡されるけど、初期化の順番は親クラスから**）により、*子クラスが親クラスのメソッドやプロパティを利用することができる*
+
+---
+
+# 各Providerの特徴についてはこの記事がわかりやすい
+
+[Flutter 個人的Riverpodの理解まとめ](https://zenn.dev/wutchy_zenn/articles/a03dce8025fcf1#statenotifierprovider)
+
+# Providerについて
+
+Providerの特徴は...
+
+・ 一度定義すると状態が外部から変更できない。（定数チック）
+
+・ 初期化時点で他のProviderの値を参照して、その値を加工した値をProviderの値として保持することも可能。
+
+・ グローバルな値を提供するために使われることが多い。
+
+# StateNotifierProviderについて
+
+StateNotifierProviderの特徴は...
+
+・ 状態を表す変数(state)と、状態を更新するメソッドを持つProvider。
+
+・ StateNotifierを継承したクラスを監視して、状態に変化があれば画面を更新する。
+
+・ 高度な状態管理に向いている。
