@@ -26,6 +26,10 @@ class MyApp extends StatelessWidget {
 
 //StateNotifierProvider で管理するStateNotifier のサブクラス（CounterNotifier）を実装する
 //外部からデータを変更する時はこのサブクラス内のメソッドを呼び出す
+//このプロバイダーの特徴は...
+//状態を表す変数(state)と、状態を更新するメソッドを持つProvider。
+//StateNotifierを継承したクラスを監視して、状態に変化があれば画面を更新する。
+//高度な状態管理に向いている。
 class CounterNotifier extends StateNotifier<int> {
   CounterNotifier() : super(0);
 
@@ -37,6 +41,7 @@ class CounterNotifier extends StateNotifier<int> {
 // StateNotifierProvider を作成する
 // StateNotifierProvider を定義する時は
 // StateNotifierProvider の後に<管理するStateNotifier のサブクラス名, StateNotifier で管理するデータの型>が必要
+// このStateNotifierProvider を使ってStateNotifier のサブクラスを取得することができる　→ Go言語のファクトリー関数っぽいけど、厳密には違う？
 final counterProvider = StateNotifierProvider<CounterNotifier, int>((ref) {
   return CounterNotifier();
 });
