@@ -24,9 +24,13 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// Providerは外部から変更することができないデータを管理するためのものであり、
+// このデータは、アプリケーション全体で共有される
+
 //Providerをグローバル変数として定義する
-//Providerとはデータを管理する入れ物のようなクラスで。文字列'Hello, Riverpod!'を保持する状態を作成している
+//Providerとはデータを管理する入れ物のようなクラスで、文字列'Hello, Riverpod!'を保持する状態を作成している
 //この例では、String型のデータである'Hello, Riverpod!'を管理するProviderを定義している
+//Providerは、データを提供するためのものであり、データを提供するための関数をラムダ式で指定する
 //refは、他のプロバイダーを参照するために使用できるProviderReferenceオブジェクトであり、ラムダ式の引数である
 //refはラムダ式の引数（パラメータ）であり、関数本体（つまり、評価される式）は「'Hello, Riverpod!'」であり、
 //このラムダ式は呼び出されると常に「'Hello, Riverpod!'」を返す
