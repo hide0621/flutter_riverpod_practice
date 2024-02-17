@@ -150,3 +150,11 @@ Flutterフレームワークはこの`key(Keyクラスのオブジェクト)`を
 
 ⭐️Riverpod版のStatefulWidget。
 
+---
+
+# 1つのプロパティに複数のウィジェットを当てこむには...
+
+`Row()`を使って、ウィジェットを並べて扱う！
+
+[サンプルはこちら](https://github.com/hide0621/flutter_riverpod_practice/blob/feature/practice-StateProvider/lib/main.dart)
+
