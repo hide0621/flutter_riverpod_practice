@@ -118,6 +118,14 @@ Flutterフレームワークはこの`key(Keyクラスのオブジェクト)`を
 
 [このレポジトリでのサンプルコード](https://github.com/hide0621/flutter_riverpod_practice/blob/feature/practice-FutureProvider/lib/main.dart)
 
+なお、**非同期処理**については、こちらを参照
+
+[dart-sample Readme 非同期処理について](https://github.com/hide0621/dart-sample?tab=readme-ov-file#%E9%9D%9E%E5%90%8C%E6%9C%9F%E5%87%A6%E7%90%86%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
+
+[サンプルコード1](https://github.com/hide0621/dart-sample/blob/develop/chapter2/future_async_await.dart)
+
+[サンプルコード2](https://github.com/hide0621/dart-sample/blob/develop/tour_of_dart/asynchronous_processing/future_async_await_sample.dart)
+
 # StateProviderについて
 
 `StateProvider`の特徴は...
