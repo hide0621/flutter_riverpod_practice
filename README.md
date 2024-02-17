@@ -98,7 +98,7 @@ Flutterフレームワークはこの`key(Keyクラスのオブジェクト)`を
 
 `StateNotifierProvider`の特徴は...
 
-⭐️状態を表す変数(`state`)と、状態を更新するメソッドを持つProvider。
+⭐️状態を表す変数(`state`)と、状態を更新するメソッドを持つ`Provider`。
 
 ⭐️`StateNotifier`を継承したクラスを監視して、**状態に変化があれば画面を更新する。**
 
@@ -107,6 +107,8 @@ Flutterフレームワークはこの`key(Keyクラスのオブジェクト)`を
 [このレポジトリでのサンプルコード](https://github.com/hide0621/flutter_riverpod_practice/blob/feature/pracitce-StateNotifierProvider/lib/main.dart)
 
 # FutureProviderについて
+
+`FutureProvider`の特徴は...
 
 ⭐️`Future`型を取り扱うProvider。
 
@@ -118,7 +120,9 @@ Flutterフレームワークはこの`key(Keyクラスのオブジェクト)`を
 
 # StateProviderについて
 
-⭐️Providerのnotifierを参照し、直接値を変更する。（**変数チック**）
+`StateProvider`の特徴は...
+
+⭐️`Provider`の`notifier`を参照し、直接値を変更する。（**変数チック**）
 
 ⭐️イミュータブルな状態を提供。
 
