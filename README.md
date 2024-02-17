@@ -116,6 +116,14 @@ Flutterフレームワークはこの`key(Keyクラスのオブジェクト)`を
 
 [このレポジトリでのサンプルコード](https://github.com/hide0621/flutter_riverpod_practice/blob/feature/practice-FutureProvider/lib/main.dart)
 
+# StateProviderについて
+
+⭐️Providerのnotifierを参照し、直接値を変更する。（**変数チック**）
+
+⭐️イミュータブルな状態を提供。
+
+⭐️値の変更は新しい値を生成することによって行われる。
+
 ---
 
 # 各Widgetについてもこの記事がわかりやすい
