@@ -128,6 +128,10 @@ Flutterフレームワークはこの`key(Keyクラスのオブジェクト)`を
 
 ⭐️値の変更は新しい値を生成することによって行われる。
 
+[このレポジトリでのサンプルコード](https://github.com/hide0621/flutter_riverpod_practice/blob/6eb05745f52942d25e606b6c073988de951b67f4/lib/main.dart)
+
+[Rowウィジェットver](https://github.com/hide0621/flutter_riverpod_practice/blob/feature/practice-StateProvider/lib/main.dart)
+
 ---
 
 # 各Widgetについてもこの記事がわかりやすい
