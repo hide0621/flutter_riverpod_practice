@@ -37,31 +37,44 @@ class RiverpodSample extends ConsumerWidget {
     final count = ref.watch(stateProvider);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Riverpod Sample'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        appBar: AppBar(
+          title: const Text('Riverpod Sample'),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              const Text(
+                'You have pushed the button this many times:',
+              ),
+              Text(
+                '${countStateController.state}',
+                style: Theme.of(context).textTheme.headline4,
+              ),
+            ],
+          ),
+        ),
+        floatingActionButton: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+            FloatingActionButton(
+              onPressed: () {
+                // StateProviderオブジェクトの状態を更新する
+                countStateController.state++;
+              },
+              tooltip: 'Increment',
+              child: const Icon(Icons.add),
             ),
-            Text(
-              '${countStateController.state}',
-              style: Theme.of(context).textTheme.headline4,
+            FloatingActionButton(
+              onPressed: () {
+                // StateProviderオブジェクトの状態を更新する
+                countStateController.state--;
+              },
+              tooltip: 'Decrement',
+              child: const Icon(Icons.remove),
             ),
           ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          countStateController.state++;
-        },
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
-    );
+        ));
   }
 }
 
