@@ -31,7 +31,9 @@ class RiverpodSample extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // StateProviderオブジェクトを取得
     final countStateController = ref.read(stateProvider.notifier);
+    // StateProviderオブジェクトの状態を読み取って、状態遷移を検知する (StateProviderオブジェクトの状態を監視する)
     final count = ref.watch(stateProvider);
 
     return Scaffold(
