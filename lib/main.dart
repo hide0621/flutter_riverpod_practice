@@ -23,9 +23,10 @@ class MyApp extends StatelessWidget {
 
 final strProvider = Provider((ref) => 'Hello, Riverpod!');
 
-// ConsumerStatefulWidgetにすることにより、
+// ConsumerStatefulWidgetをWrapすることにより、
 // buildメソッドの引数にrefを渡さずに、
 // stateからrefを参照することができる（値を参照することができる）
+// 今回ならStateとはRiverpodSampleState
 class RiverpodSample extends ConsumerStatefulWidget {
   const RiverpodSample({Key? key}) : super(key: key);
 
@@ -34,9 +35,8 @@ class RiverpodSample extends ConsumerStatefulWidget {
 }
 
 class RiverpodSampleState extends ConsumerState<RiverpodSample> {
-  // 以下のbuildの中のref部分のように、
-  // buildメソッドの引数にrefを渡さずに、
-  // stateからrefを参照することができる（値を参照することができる）
+  // このrefはConsumerState内で定義されていて、
+  // ウィジェット（今回ならRiverpodSample）がProviderとやりとりする為に存在するオブジェクト
   @override
   Widget build(BuildContext context) {
     final value = ref.watch(strProvider);
