@@ -158,6 +158,8 @@ Flutterフレームワークはこの`key(Keyクラスのオブジェクト)`を
 
 ⭐️Riverpod版のStatefulWidget。
 
+[このレポジトリのサンプルコード](https://github.com/hide0621/flutter_riverpod_practice/blob/feature/practice-ConsumerStatefulWidget/lib/main.dart)
+
 ---
 
 # 1つのプロパティに複数のウィジェットを当てこむには...
