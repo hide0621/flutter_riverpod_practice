@@ -154,7 +154,9 @@ Flutterフレームワークはこの`key(Keyクラスのオブジェクト)`を
 
 # ConsumerStatefulWidget
 
-⭐️State内からrefが参照できる。
+⭐️State内からrefが参照できる。（以下のサンプルコードで言うと、`RiverpodSampleState`のこと）
+
+⇨ **管理したいStateをカスタムするイメージで実装する！**
 
 ⭐️Riverpod版のStatefulWidget。
 
